@@ -20,6 +20,13 @@ import java.util.List;
 public class OrderController {
     @Resource
     private OrderService orderService;
+
+    /**
+     * 获取订单列表
+     * @param request
+     * @param response
+     * @return
+     */
     @RequestMapping("/getList")
     public ModelAndView getList(HttpServletRequest request, HttpServletResponse response){
         ModelAndView modelAndView = new ModelAndView("orderList");
