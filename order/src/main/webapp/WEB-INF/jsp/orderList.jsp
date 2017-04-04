@@ -6,9 +6,6 @@
     <title>订单列表</title>
 </head>
 <body>
-    <%
-        request.getAttribute("orders");
-    %>
     <table>
         <tr>
             <th>ID</th>
