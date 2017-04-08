@@ -7,23 +7,30 @@
         <link href="css/bootstrap/3.3.7/bootstrap.min.css" rel="stylesheet">
     </head>
     <body class="wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
+        <div class="navbar-jumbotron">
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/img/logo_grey.svg" alt="Prometheus logo"> Prometheus</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="nav navbar-nav navbar-right main-nav">
+                            <li><a href="/docs/introduction/overview/">Docs</a></li>
+                            <li><a href="/download/">Download</a></li>
+                            <li><a href="/community/">Community</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="https://github.com/prometheus"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://twitter.com/PrometheusIO"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-lg-8">
-                    <ul class="nav nav-pills">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">SVN</a></li>
-                        <li><a href="#">iOS</a></li>
-                        <li><a href="#">VB.Net</a></li>
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">PHP</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                </div>
-            </div>
+            </nav>
         </div>
         <div class="container">
             <div class="row">
