@@ -14,10 +14,8 @@
     <mvc:annotation-driven />
 
     <context:component-scan base-package="cn.cloudcore" />
-    <!--创建handlermapper -->
-    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
-    <!--创建handlerAdapter -->
-    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+    <!-- 配置默认mvc servlet -->
+    <mvc:default-servlet-handler />
     <!-- 对模型视图名称的解析,在请求时模型视图名称添加前后缀 -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/" />      <!-- 前缀 -->
