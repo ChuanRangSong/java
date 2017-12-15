@@ -23,5 +23,6 @@
     </form>
 </div>
 <script src="/js/angular-1.6.6/angular.js"></script>
+<script src="/js/cloudcore/login.js"></script>
 </body>
 </html>
