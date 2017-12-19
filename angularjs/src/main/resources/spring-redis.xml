@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                         http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
-    <bean id="client" class="redis.clients.jedis.Client">
+    <bean id="jedis" class="redis.clients.jedis.Jedis">
         <constructor-arg name="host" value="${redis.host}"/>
         <constructor-arg name="port" value="${redis.port}"/>
     </bean>

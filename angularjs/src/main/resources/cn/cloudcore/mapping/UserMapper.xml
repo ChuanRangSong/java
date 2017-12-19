@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cloudcore.dao.IUserDao">
+
+    <select id="findByUsername" resultType="User">
+        SELECT * FROM `user` u WHERE u.username = #{username}
+    </select>
+    <select id="findById" resultType="User">
+        SELECT u.id, u.username FROM `user` u WHERE u.id = #{id}
+    </select>
+</mapper>
