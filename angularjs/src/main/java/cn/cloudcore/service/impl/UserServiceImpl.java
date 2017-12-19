@@ -4,7 +4,7 @@ import cn.cloudcore.dao.IUserDao;
 import cn.cloudcore.model.User;
 import cn.cloudcore.service.IUserService;
 import org.springframework.stereotype.Service;
-import redis.clients.jedis.Client;
+import redis.clients.jedis.Jedis;
 
 import javax.annotation.Resource;
 
@@ -13,6 +13,8 @@ public class UserServiceImpl implements IUserService {
 
     @Resource
     private IUserDao userDao;
+    @Resource
+    private Jedis jedis;
 
     /**
      * 根据用户名查找用户

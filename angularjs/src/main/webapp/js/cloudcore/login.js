@@ -5,6 +5,9 @@ app.controller('checkLogin', function ($scope, $http) {
         url: '/user/checkLogin?username=username'
     }).then(function successCallback(response) {
         $scope.user = response.data;
+        if ($scope.user == "") {
+            window.location = "/user/login";
+        }
     }, function errorCallback(response) {
 
     });

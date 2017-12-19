@@ -4,16 +4,15 @@ import cn.cloudcore.model.User;
 import cn.cloudcore.service.IUserService;
 import cn.cloudcore.util.Constants;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.support.AbstractMultipartHttpServletRequest;
-import redis.clients.jedis.Client;
 import redis.clients.jedis.Jedis;
 
 import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.UUID;
 
 
 @Controller
@@ -27,10 +26,26 @@ public class UserController {
     private Jedis jedis;
 
     @RequestMapping("/login")
-    public String login(User user, Model model) {
-        System.out.println(user.getUsername() + ":" + user.getPassword());
-        model.addAttribute("user", userService.findByUsername(user.getUsername()));
-        return "main";
+    public String login() {
+        return "login";
+    }
+
+    @RequestMapping("/doLogin")
+    public String doLogin(User user, HttpServletResponse response) {
+
+        User dbUser = userService.findByUsername(user.getUsername());
+
+        if (null != dbUser) {
+            if (dbUser.getPassword().equals(user.getPassword())) {
+                String csessionId = UUID.randomUUID().toString() + dbUser.getId();
+                Cookie cookie = new Cookie(Constants.CSESSIONID_NAME, csessionId);
+                cookie.setMaxAge(-1);
+                response.addCookie(cookie);
+                jedis.setex(csessionId, 60, dbUser.getId() + "");
+            }
+        }
+
+        return "redirect:/";
     }
 
     @RequestMapping("/checkLogin")
