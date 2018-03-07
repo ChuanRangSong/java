@@ -1,14 +1,13 @@
 <!doctype html>
-<html ng-app="myApp">
+<html>
 <head>
-    <meta content="text/html" charset="UTF-8">
-    <title>AngularJS</title>
+    <meta charset="utf-8">
+    <title>Angular JS Views</title>
 </head>
 <body>
-<div ng-controller="checkLogin">
-   <h1>Welcome {{user.username}}</h1>
-</div>
-<script src="/js/angular-1.6.6/angular.js"></script>
-<script src="/js/cloudcore/login.js"></script>
 </body>
+<script src="/js/angular-1.6.6/angular.js"></script>
+<script src="/js/angular-1.6.6/angular-route.js"></script>
+<script type="text/javascript">
+</script>
 </html>

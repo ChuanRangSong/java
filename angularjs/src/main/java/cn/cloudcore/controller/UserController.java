@@ -37,9 +37,8 @@ public class UserController {
 
         if (null != dbUser) {
             if (dbUser.getPassword().equals(user.getPassword())) {
-                String csessionId = UUID.randomUUID().toString() + dbUser.getId();
+                String csessionId = UUID.randomUUID().toString().replace("-", "").toUpperCase() + dbUser.getId();
                 Cookie cookie = new Cookie(Constants.CSESSIONID_NAME, csessionId);
-                cookie.setMaxAge(-1);
                 cookie.setPath("/");
                 response.addCookie(cookie);
                 jedis.setex(csessionId, 60, dbUser.getId() + "");
