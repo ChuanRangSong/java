@@ -32,4 +32,11 @@ public class HelloTests {
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Hello World")));
     }
+
+    @Test
+    public void getHello1() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Hello World")));
+    }
 }
