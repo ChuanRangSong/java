@@ -19,6 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 public class HelloTests {
 
+
     private MockMvc mvc;
 
     @Before
@@ -32,4 +33,6 @@ public class HelloTests {
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Hello World")));
     }
+
+
 }
