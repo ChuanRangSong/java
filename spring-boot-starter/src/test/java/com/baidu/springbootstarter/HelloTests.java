@@ -19,7 +19,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 public class HelloTests {
 
-
     private MockMvc mvc;
 
     @Before
