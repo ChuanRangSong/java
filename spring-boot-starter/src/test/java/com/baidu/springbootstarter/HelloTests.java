@@ -1,6 +1,6 @@
 package com.baidu.springbootstarter;
 
-import com.baidu.controller.HelloWorldController;
+import com.baidu.springbootstarter.controller.HelloWorldController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
