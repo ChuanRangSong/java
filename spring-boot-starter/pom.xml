@@ -6,7 +6,7 @@
 	<groupId>com.baidu</groupId>
 	<artifactId>spring-boot-starter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>spring-boot-starter</name>
 	<description>Demo project for Spring Boot</description>
@@ -51,6 +51,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>spring-boot-starter</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
