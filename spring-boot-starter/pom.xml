@@ -52,8 +52,8 @@
 
 	<scm>
 		<connection>scm:git:https://github.com/ChuanRangSong/java.git</connection>
-		<url>github.com/ChuanRangSong/java</url>
-		<developerConnection>scm:github.com/ChuanRangSong/java.git</developerConnection>
+		<url>git:github.com/ChuanRangSong/java</url>
+		<developerConnection>scm:git:github.com/ChuanRangSong/java.git</developerConnection>
 	</scm>
 
 	<build>
