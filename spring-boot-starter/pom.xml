@@ -50,6 +50,12 @@
 		</dependency>
 	</dependencies>
 
+	<scm>
+		<connection>scm:git:http://github.com/ChuanRangSong/java.git</connection>
+		<url>http://github.com/ChuanRangSong/java</url>
+		<developerConnection>scm:http://github.com/ChuanRangSong/java.git</developerConnection>
+	</scm>
+
 	<build>
 		<finalName>spring-boot-starter</finalName>
 		<plugins>
@@ -58,6 +64,23 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<fork>true</fork>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<!--<tagNameFormat>v@{project.version}</tagNameFormat>-->
+					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 			</plugin>
 		</plugins>
