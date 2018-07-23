@@ -51,9 +51,9 @@
 	</dependencies>
 
 	<scm>
-		<connection>scm:git:http://github.com/ChuanRangSong/java.git</connection>
-		<url>http://github.com/ChuanRangSong/java</url>
-		<developerConnection>scm:http://github.com/ChuanRangSong/java.git</developerConnection>
+		<connection>scm:git:https://github.com/ChuanRangSong/java.git</connection>
+		<url>https://github.com/ChuanRangSong/java</url>
+		<developerConnection>scm:https://github.com/ChuanRangSong/java.git</developerConnection>
 	</scm>
 
 	<build>
